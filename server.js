@@ -2,7 +2,7 @@
 var express = require('express');
 // var app = express();
 // var Victor = require('victor');
-// var http = require('http');
+var http = require('http');
 var path = require('path');
 // //var socketIO = require('socket.io');
 // var server = require('http').createServer(app);
@@ -11,7 +11,8 @@ var path = require('path');
 
 var app = require('express')();
 var server = require('http').Server(app);
-var io = require('socket.io')(server);
+//var io = require('socket.io')(server);
+var io     = require('socket.io')(http).listen(server);    
 
 // var app = express();
 // app.set('port', process.env.PORT || 3000);
