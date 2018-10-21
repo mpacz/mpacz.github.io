@@ -1,14 +1,17 @@
 // Dependencies
 var express = require('express');
+var app = express();
 var Victor = require('victor');
-var http = require('http');
+//var http = require('http');
 var path = require('path');
 //var socketIO = require('socket.io');
-var socketIO = require('socket.io');
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
+//var socketIO = require('socket.io');
 
-var app = express();
-var server = http.Server(app);
-var io = socketIO(server);
+//var app = express();
+//var server = http.Server(app);
+//var io = socketIO(server);
 app.set('port', 5000);
 app.use('/static', express.static(__dirname + '/static'));
 // Routing
