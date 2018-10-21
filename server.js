@@ -1,13 +1,19 @@
-// Dependencies
+// // Dependencies
 var express = require('express');
 var app = express();
 var Victor = require('victor');
-//var http = require('http');
+var http = require('http');
 var path = require('path');
 //var socketIO = require('socket.io');
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 //var socketIO = require('socket.io');
+
+// var app = express();
+// app.set('port', process.env.PORT || 3000);
+// var server = http.createServer(app);
+// var io = require('socket.io').listen(server);
+// server.listen(app.get('port'));
 
 //var app = express();
 //var server = http.Server(app);
