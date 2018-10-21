@@ -3,8 +3,8 @@ var express = require('express');
 var Victor = require('victor');
 var http = require('http');
 var path = require('path');
+//var socketIO = require('socket.io');
 var socketIO = require('socket.io');
-//var socketIO = require('socket.io')(http);
 
 var app = express();
 var server = http.Server(app);
