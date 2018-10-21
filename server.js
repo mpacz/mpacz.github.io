@@ -75,6 +75,9 @@ setInterval(function() {
 
 function calcMissiles(){
   for (var id in missiles){
+    if(missile.x > 2000 || missile.x < 2000 || missile.y < 2000 || missile.y > 2000){
+      delete missiles[id];
+    }
     var missile = missiles[id];
     missile.x = missile.x + missile.vec.x * 25;
     missile.y = missile.y + missile.vec.y * 25;
