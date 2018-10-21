@@ -1,32 +1,67 @@
 // // Dependencies
-var express = require('express');
-// var app = express();
-// var Victor = require('victor');
-var http = require('http');
-var path = require('path');
-// //var socketIO = require('socket.io');
-// var server = require('http').createServer(app);
-// var io = require('socket.io')(server);
-// //var socketIO = require('socket.io');
+// var express = require('express');
+// // var app = express();
+ var Victor = require('victor');
+// var http = require('http');
+// var path = require('path');
+// // //var socketIO = require('socket.io');
+// // var server = require('http').createServer(app);
+// // var io = require('socket.io')(server);
+// // //var socketIO = require('socket.io');
 
-var app = require('express')();
-var server = require('http').Server(app);
-//var io = require('socket.io')(server);
-var io = require('socket.io')(http);    
+// var app = require('express')();
+// var server = require('http').Server(app);
+// //var io = require('socket.io')(server);
+// var io = require('socket.io')(http);    
+
+
+
+const express = require('express');
+const socketIO = require('socket.io');
+const path = require('path');
+
+const PORT = process.env.PORT || 3000;
+const INDEX = path.join(__dirname, 'index.html');
+
+const server = express()
+  .use('/static', express.static(__dirname + '/static'))
+  .use((req, res) => res.sendFile(INDEX) )
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
+const io = socketIO(server);
+
+
+
+
+
 
 //var app = express();
 //var server = http.Server(app);
 //var io = socketIO(server);
-app.set('port', process.env.PORT || 5000);
-app.use('/static', express.static(__dirname + '/static'));
+
+//server.set('port', process.env.PORT || 5000);
+//path.use('/static', express.static(__dirname + '/static'));
 // Routing
-app.get('/', function(request, response) {
-  response.sendFile(path.join(__dirname, 'index.html'));
-});
+// server.get('/', function(request, response) {
+//   response.sendFile(path.join(__dirname, 'index.html'));
+// });
+
+
+// app.set('port', process.env.PORT || 5000);
+// app.use('/static', express.static(__dirname + '/static'));
+// // Routing
+// app.get('/', function(request, response) {
+//   response.sendFile(path.join(__dirname, 'index.html'));
+// });
+
+
+
+
+
 // Starts the server.
-server.listen(process.env.PORT || 5000, function() {
-  console.log('Starting server on port 5000');
-});
+// server.listen(process.env.PORT || 5000, function() {
+//   console.log('Starting server on port 5000');
+// });
 // Add the WebSocket handlers
 io.on('connection', function(socket) {
 });
