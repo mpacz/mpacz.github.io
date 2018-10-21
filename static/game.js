@@ -1,5 +1,5 @@
-var host = window.location.hostname; 
-var socket = io.connect('https://' + host);
+var origin = window.location.origin;
+var socket = io.connect(origin);
 //var socket = io();
 
 var movement = {
