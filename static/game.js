@@ -35,10 +35,11 @@ document.addEventListener('mousemove', onMouseUpdate, false);
 function onMouseUpdate(event){
     var canvas = document.getElementById('canvas');
     var canvasCords = getOffset(canvas);
-    var x = event.clientX - canvasCords.left - playersGlobal[socket.id].x - 15;
-    var y = event.clientY - canvasCords.top - playersGlobal[socket.id].y - 15;
-    directionVector = new Victor(x, y).normalize();
-    console.log(directionVector);
+    if(typeof playersGlobal != undefined){
+        var x = event.clientX - canvasCords.left - playersGlobal[socket.id].x - 15;
+        var y = event.clientY - canvasCords.top - playersGlobal[socket.id].y - 15;
+        directionVector = new Victor(x, y).normalize();
+    }
 }
 
 document.addEventListener('keyup', function(event) {
