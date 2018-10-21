@@ -91,6 +91,7 @@ function calcCollisions(){
 
         if(players[playerId].hp <1){
           delete players[playerId];
+          delete missiles[playerId];
           players[id].score++;
         }
 
