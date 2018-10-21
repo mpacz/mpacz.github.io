@@ -17,7 +17,7 @@ var io = require('socket.io')(http);
 //var app = express();
 //var server = http.Server(app);
 //var io = socketIO(server);
-app.set('port', 5000);
+app.set('port', process.env.PORT || 5000);
 app.use('/static', express.static(__dirname + '/static'));
 // Routing
 app.get('/', function(request, response) {
