@@ -1,4 +1,6 @@
-var socket = io();
+var origin = window.location.origin;
+var socket = io.connect(origin);
+//var socket = io();
 
 var movement = {
     up: false,
