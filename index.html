@@ -1,40 +1,29 @@
-<html>
-  <head>
-    <title>A Multiplayer Game</title>
-    <style>
-      canvas {
-        width: 1100px;
-        height: 800px;
-        border: 5px solid black;
-        margin: 0 auto;
-        display: table;
-        float: left;
-        
-      }
-      .score{
-          margin-left: 50px;
-          margin-top: 50px;
-          float: left;
-      }
-      #outer{
-          display: flex;
-          font-size: 20px;
-          font-weight: 800;
-      }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
-    <!-- <script type="text/javascript" src="/socket.io/socket.io.js"></script> -->
-    <!-- <script src="/socket.io/socket.io.js"></script> -->
-  </head>
-  <body>
-    <div  onmousedown="return false" id="outer" style="width:100%; cursor: crosshair;">
-        <span class="score">
-            <header>Score table</header>
-            <div id='scoreTable'></div>
-        </span>
-        <canvas id="canvas"></canvas>
-    </div>
-  </body>
-  <script src="/static/victor_min.js"></script>
-  <script src="/static/game.js"></script>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapacz Games</title>
+<meta name="description" content="Mapacz Games: small, cosy mobile games.">
+<link rel="icon" href="hive-inc/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Mapacz Games</h1>
+<p class="lead">Small, cosy mobile games.</p>
+
+<a class="card" href="hive-inc/">
+  <img src="hive-inc/icon.png" alt="Hive Inc. icon">
+  <div>
+    <h2>Hive Inc.: Bee Tycoon</h2>
+    <p>Grow one straw hive into the biggest honey business in the world. Android.</p>
+  </div>
+</a>
+
+<footer>
+  Maciej Paczocha NET · <a href="mailto:mapacz.dev@gmail.com">mapacz.dev@gmail.com</a>
+</footer>
+</main>
+</body>
 </html>
