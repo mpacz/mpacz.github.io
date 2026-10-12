@@ -3,27 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mapacz Games</title>
-<meta name="description" content="Mapacz Games: small, cosy mobile games.">
+<title>Mapacz Games: small, cosy mobile games</title>
+<meta name="description" content="Mapacz Games is a small independent studio from Poland making cosy mobile games. Our first game: Hive Inc.: Bee Tycoon.">
+<meta name="theme-color" content="#ffc93c">
 <link rel="icon" href="hive-inc/icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/LilitaOne.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mapacz Games">
+<meta property="og:description" content="Small, cosy mobile games. Our first game: Hive Inc.: Bee Tycoon.">
+<meta property="og:url" content="https://mpacz.github.io/">
+<meta property="og:image" content="https://mpacz.github.io/hive-inc/feature.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<main>
-<h1>Mapacz Games</h1>
-<p class="lead">Small, cosy mobile games.</p>
-
-<a class="card" href="hive-inc/">
-  <img src="hive-inc/icon.png" alt="Hive Inc. icon">
-  <div>
-    <h2>Hive Inc.: Bee Tycoon</h2>
-    <p>Grow one straw hive into the biggest honey business in the world. Android.</p>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="bee.svg" alt=""> Mapacz Games</a>
+    <nav><a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   </div>
-</a>
+</header>
+
+<div class="hero">
+  <img class="fly" src="bee.svg" alt="" style="right: 7%; top: 34px">
+  <img class="fly two" src="bee.svg" alt="" style="right: 27%; bottom: 40px">
+  <div class="wrap">
+    <h1 class="outlined">Small, cosy games<br>for your phone</h1>
+    <p class="lead">Mapacz Games is a tiny independent studio from Poland. We make relaxing games you can
+      pick up for a few minutes and happily come back to.</p>
+    <div class="btns">
+      <a class="btn" href="hive-inc/">Meet Hive Inc.</a>
+      <a class="btn honey" href="#contact">Say hello</a>
+    </div>
+  </div>
+</div>
+<div class="drips"></div>
+
+<main>
+<section id="games">
+  <div class="wrap">
+    <h2>Our games</h2>
+    <article class="card game">
+      <img src="hive-inc/img/feature.webp" width="1024" height="500" alt="Hive Inc.: Bee Tycoon: build a buzzing bee empire">
+      <div class="body">
+        <div>
+          <div class="title">
+            <img src="hive-inc/img/icon.webp" alt="">
+            <h3>Hive Inc.: Bee Tycoon</h3>
+          </div>
+          <p>Start with one straw hive and a meadow of wildflowers, and grow it into the biggest honey business
+            in the world. Send out the swarm, upgrade hives and trucks, and unlock 19 kinds of honey.</p>
+          <ul class="pills"><li>Android</li><li>Free</li><li>No ads</li><li>Plays offline</li></ul>
+        </div>
+        <div class="btns">
+          <a class="btn honey" href="hive-inc/">See the game</a>
+          <span class="btn soon">Coming soon to Google Play</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <img src="bee.svg" alt="">
+    <div>
+      <h2>About us</h2>
+      <p>Mapacz Games is the games label of Maciej Paczocha NET, a small company from Poland. We like
+        games that are cosy rather than stressful: easy to start, satisfying to grow, and fair to the player.</p>
+      <p>Our first game, Hive Inc.: Bee Tycoon, has no ads and nothing to buy.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="card contact">
+      <h2>Say hello</h2>
+      <p>A question, a bug, or an idea for the next game? Write to us. We're always happy to hear from players.</p>
+      <a class="btn" href="mailto:mapacz.dev@gmail.com">mapacz.dev@gmail.com</a>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
-  Maciej Paczocha NET · <a href="mailto:mapacz.dev@gmail.com">mapacz.dev@gmail.com</a>
+  <div class="wrap">
+    <div>© 2026 Maciej Paczocha NET · Mapacz Games</div>
+    <div class="links"><a href="hive-inc/">Hive Inc.</a><a href="hive-inc/privacy/">Privacy policy</a><a href="mailto:mapacz.dev@gmail.com">mapacz.dev@gmail.com</a></div>
+  </div>
 </footer>
-</main>
 </body>
 </html>
